@@ -1,0 +1,78 @@
+<!-- 07_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <!-- Form = 양식 action은 누구한테 제출할건지? 를 써야함! -->
+    <!-- method가 get일 경우는, 여기 있는 입력 데이터는 남들이 봐도 상관이 없다. 라는 뜻. -->
+    <!-- method가 post일 경우는, 여기 있는 입력 데이터는 보이면 안된다. 라는 뜻. -->
+    <form action="URL(이 데이터를 제출(요청)할 url)" method="post">
+        <!-- div : division, divide 즉, 그냥 구역이라는 거고 역할은 딱히 없다! -->
+        <div>
+            <label for="username">username</label>
+            <input type="text" id="username" required autofocus>
+            <!-- input에 required를 달면 input을 안하면 넘어갈 수 없게끔 해준다!  -->
+            <!-- autofocus는 새로고침했을 때 그 곳에 커서가 기본적으로 오토포커스가 맞춰짐. -->
+        </div>
+        
+        <div>
+            <label for="password">password</label>
+            <input type="password" id="password">
+        </div>
+
+        <div>
+            <label for="my-email">email</label>
+            <input type="email" id="my-email" placeholder="email은 @를 포함합니다.">
+        </div>
+
+        <div>
+            <label for="age">age</label>
+            <input type="number" id="age" value="20">
+        </div>
+
+        <!-- checkbox와 radio는 text와는 다르게 체크한다고 해서 넘어가는 데이터를 value값으로 지정해줘야함! -->
+        <div>
+            <input type="checkbox" id="apple" value="apple"> <label for="apple">사과</label>
+            <input type="checkbox" value="banana">바나나
+            <input type="checkbox" value="strawberry">딸기
+        </div>
+
+        <div>
+            <input type="radio" name="'gender" value="male">남자
+            <input type="radio" name="'gender" value="female">여자
+            <input type="radio" name="'gender" value="none">둘 다 아님
+        </div>
+
+        <div>
+            <input type="submit" value="얍!">
+            <!-- submit의 value를 바꾸면 제출 버튼이 얍!으로 바뀐다. -->
+        </div>
+    </form>
+
+    <div>
+        <input type="color">
+        <input type="email">
+        <input type="number">
+        <input type="text">
+        <input type="checkbox">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <!-- Input은 inline 입니다! 브라우저로 열어보면 input창이 계속 옆으로 생성되는 걸 볼 수 있다. -->
+    <!-- Input 태그는 무조건 form 안에 있어야한다! 바깥에 위치하면 '제출'이 안된다. -->
+
+    <hr>
+
+    <form action="https://search.naver.com/search.naver" method="get">
+        <label for="keyword">검색어: </label>
+        <input type="text" name="query" id="keyword">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- 03_box.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* 마진 이라고만 쓰면 상하좌우 전체에 적용. */
+            /* margin: 30px; */
+            /* margin: auto; 는 블럭의 중앙 정렬. */
+            margin: auto; 
+            /* 패딩은 상 우 하 좌 순서대로 적용된다. */
+            padding: 10px 20px 30px 40px;
+            background-color: aqua;
+            color: blue;
+            border: 10px solid navy;
+        }
+    </style>
+</head>
+<body>
+    <span>inline</span>
+    <!-- inline에는 box적용 X! -->
+
+    <div>
+        block
+    </div>
+    <!-- 블럭 요소에는 box적용 가능! -->
+</body>
+</html>
